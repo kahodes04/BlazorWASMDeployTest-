@@ -1,0 +1,22 @@
+﻿@page "/"
+@using BlazorApp1.Classes
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+<p>@util.counter</p>
+<button @onclick="editFunc">button</button>
+@code
+{
+    Classes.Util util = new Util()
+    {
+        counter = 1
+    };
+
+    private void editFunc()
+    {
+        util.counter = 2;
+    }
+}
